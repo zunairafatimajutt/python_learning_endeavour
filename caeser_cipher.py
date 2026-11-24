@@ -1,10 +1,10 @@
 #Encryption: The process of converting information or data, into a code.
 #Decryption: The process of converting coded messages or unclear messages, into understandable and comprehensive information. 
-#Ceaser Cipher: Simplest and oldest methods of encrypting messages It works by shifting the letters in the plaintext message by a certain number of positions, known as the "shift" or "key".
+#Caeser Cipher: Simplest and oldest methods of encrypting messages It works by shifting the letters in the plaintext message by a certain number of positions, known as the "shift" or "key".
 #Plain alphabet text is the standard alphabet order (ABCDEFG...) and Cipher is the plain alphabet text shifted left or right by a certain number of positions. 
 #Encryption-
 
-def ceasar(message, key, mode): #1-define the function. 2-place the variables (mode can either be encrypt or decrypt,)
+def caesar(message, key, mode): #1-define the function. 2-place the variables (mode can either be encrypt or decrypt,)
     LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'  #The ruler
     translation = '' #empty string for the new letters
     message = message.upper() #Everything in CAPS to match the ruler.
@@ -18,7 +18,7 @@ def ceasar(message, key, mode): #1-define the function. 2-place the variables (m
         temporary_letters = temporary_letters % len(LETTERS) #will keep inside the range
         translation += LETTERS[temporary_letters]
     return translation #give the secret word back
-print(ceasar("CYBRARY", 11, 'encrypt')) #values of variables respectively eh~
+print(caesar("CYBRARY", 11, 'encrypt')) #values of variables respectively eh~
 
 #Explanation:THE NESTED BOXES (My Analogy)
 #1. The Big Cage: The Function (def ceasar...)
@@ -33,7 +33,7 @@ print(ceasar("CYBRARY", 11, 'encrypt')) #values of variables respectively eh~
 #You take the finished product out of the loop box, out of the function cage, and hand it to the user.
 
 #fun try:
-def ceasar(message, secret_num, mode):
+def caesar(message, secret_num, mode):
     RULER='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     Translation = ''
     message = message.upper()
@@ -47,10 +47,10 @@ def ceasar(message, secret_num, mode):
         temporary_letters = temporary_letters % 26
         Translation += RULER[temporary_letters]
     return Translation
-print(ceasar("I hate chocolate", 28, 'encrypt'))
+print(caesar("I hate chocolate", 28, 'encrypt'))
 
 #KBJCVGBEJQEQNCVG
-def ceasar(message, secret_num, mode):
+def caesar(message, secret_num, mode):
     RULER='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     Translation = ''
     message = message.upper()
@@ -64,10 +64,10 @@ def ceasar(message, secret_num, mode):
         temporary_letters = temporary_letters % 26
         Translation += RULER[temporary_letters]
     return Translation
-print(ceasar("KBJCVGBEJQEQNCVG", 28, 'decrypt'))
+print(caesar("KBJCVGBEJQEQNCVG", 28, 'decrypt'))
 
 #experiment2:
-def ceasar(message, secret_num, mode):
+def caesar(message, secret_num, mode):
     RULER='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     Translation = ''
     message = message.upper()
@@ -81,10 +81,10 @@ def ceasar(message, secret_num, mode):
         temporary_letters = temporary_letters % 26
         Translation += RULER[temporary_letters]
     return Translation
-print(ceasar("I AM SO FRUSTRATED RIGHT NOW", 9, 'encrypt'))
+print(caesar("I AM SO FRUSTRATED RIGHT NOW", 9, 'encrypt'))
 
 #I AM ABOUT TO DECRYPT the Mssg WITHOUT THE KEY. Also without they key: here's what you're going to do nere, brute force it. hehe. let's try
-def ceasar(Message, Key, Mode):
+def caesar(Message, Key, Mode):
     RULER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     TRANSLATION = ''
     Message = Message.upper()
@@ -101,10 +101,10 @@ def ceasar(Message, Key, Mode):
 #the magic recipe:
 Message = "RIJVIBXIOADBCAJCNMIARPQCIWXF" #create the variable that holds the scrambled text
 for key in range(1, 26):#loop will run 25 times. the key in first run will be 1 and so on and on.
-    print(f"Key {key}: {ceasar(Message, key, 'Decrypt')}")
+    print(f"Key {key}: {caesar(Message, key, 'Decrypt')}")
 #the secret message was on line 9: IZAMZSOZFRUSTRATEDZRIGHTZNOW remove the Z because that is space. I AM SO FRUSTRATED RIGHT NOW.
 
-#Write a ceasar code for encryption and decryption
+#Write a caesar code for encryption and decryption
 def ceasar(message, key, mode): #define a function & name the variables.
     RULER = 'abcdefghijklmnopqrstuvwxyz' #Make the ruler/compass of characters.
     message = message.lower() #Match the message's alphabet to the Ruler's lower case alphabets.
@@ -119,9 +119,9 @@ def ceasar(message, key, mode): #define a function & name the variables.
         Temporary_letters = Temporary_letters % 26
         Translation += RULER[Temporary_letters]
     return Translation
-print(ceasar("This Is Me Trying", 11, 'Encrypt'))
+print(caesar("This Is Me Trying", 11, 'Encrypt'))
 
-def ceasar(message, key, mode):
+def caesar(message, key, mode):
     COMPASS = 'abcdefghijklmnopqrstuvwxyz'
     message = message.lower()
     key = key % 26
@@ -138,11 +138,11 @@ def ceasar(message, key, mode):
 
 message = "estdktdkxpkecjtyr" #
 for key in range(1,26): #
-    print(f"key{key}: {ceasar(message, key, 'Decrypt')}") #
+    print(f"key{key}: {caesar(message, key, 'Decrypt')}") #
 #Message is on line 11 'thisziszmeztrying' (The 'z' stands for 'space')
 
-#Ceasar Cipher Code
-def ceasar (message, key, mode):
+#Caesar Cipher Code
+def caesar (message, key, mode):
     Compass = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     message = message.upper()
     key = key % 26
@@ -156,8 +156,8 @@ def ceasar (message, key, mode):
         Temporary_Letters = Temporary_Letters % 26
         Translation += Compass[Temporary_Letters]
     return Translation
-print(ceasar("My Name is Nere", 30, 'Encrypt'))
-def ceasar (message, key, mode):
+print(caesar("My Name is Nere", 30, 'Encrypt'))
+def caesar (message, key, mode):
     Translation = ''
     message = message.upper()
     key = key % 26
