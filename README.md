@@ -27,6 +27,10 @@ Here are the scripts I have built to practice real-world security concepts:
 *   **What it does:** Reads student data from a CSV file and formats it into readable sentences, experimenting with different delimiters.
 (All of these are in the csv_input.py file)
 
+### 6. Transposition Cipher ('transposition_cipher.py')
+*   **Skill:** More advanced cipher code.
+*   **What it does**: Takes strings in the code and transposes them. This method makes it harder to decode. 
+
 ## My Goals
 - Master Python syntax and logic.
 - Build custom cybersecurity tools.
